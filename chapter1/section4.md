@@ -66,9 +66,39 @@ grunt&gt; A=load "/Users/didi/pig/pig/test" uing PigStorage\(':'\) as \(Sno:char
 
 正确为：
 
-grunt&gt; A = load '/Users/didi/pig/pig/test' using PigStorage\(':'\) as \(Sno:chararray,Sname:chararray,Ssex:chararray,Sage:int,Sdept:chararray\); B = foreach A generate Sname,Sage; dump B;
+grunt&gt; A = load '/Users/didi/pig/pig/test.txt' using PigStorage\(':'\) as \(Sno:chararray,Sname:chararray,Ssex:chararray,Sage:int,Sdept:chararray\); B = foreach A generate Sname,Sage; dump B;
 
+2017-08-13 17:09:39,086 \[main\] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
 
+\(李勇,20\)
 
+\(王丽,19\)
 
+\(刘花,18\)
+
+\(李肖,19\)
+
+\(吴达,19\)
+
+\(滑可,19\)
+
+$ hdfs dfs -put /Users/didi/pig/pig/test.txt /input
+
+$ ./bin/pig -x mapreduce
+
+grunt&gt; A = load 'hdfs://localhost:8020/input/test.txt' using PigStorage\(':'\) as \(Sno:chararray,Sname:chararray,Ssex:chararray,Sage:int,Sdept:chararray\); B = foreach A generate Sname,Sage; dump B;
+
+2017-08-13 17:13:55,153 \[main\] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+
+\(李勇,20\)
+
+\(王丽,19\)
+
+\(刘花,18\)
+
+\(李肖,19\)
+
+\(吴达,19\)
+
+\(滑可,19\)
 
