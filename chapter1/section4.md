@@ -102,3 +102,25 @@ grunt&gt; A = load 'hdfs://localhost:8020/input/test.txt' using PigStorage\(':'\
 
 \(滑可,19\)
 
+$ vi test\_script.pig
+
+A = load 'hdfs://localhost:8020/input/test.txt' using PigStorage\(':'\) as \(Sno:chararray,Sname:chararray,Ssex:chararray,Sage:int,Sdept:chararray\); B = foreach A generate Sname,Sage; dump B;
+
+$ ./bin/pig -x mapreduce test\_script.pig
+
+2017-08-13 17:17:45,814 \[main\] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+
+\(李勇,20\)
+
+\(王丽,19\)
+
+\(刘花,18\)
+
+\(李肖,19\)
+
+\(吴达,19\)
+
+\(滑可,19\)
+
+2017-08-13 17:17:45,878 \[main\] INFO  org.apache.pig.Main - Pig script completed in 8 seconds and 798 milliseconds \(8798 ms\)
+
