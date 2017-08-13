@@ -12,3 +12,17 @@ export CLASSPATH=$CLASSPATH:$PIG\_HOME/lib/\*
 
 export PIG\_CLASSPATH = $PIG\_HOME/conf
 
+$ pig -h properties
+
+The following properties are supported:
+
+    Logging:
+
+        verbose=true\|false; default is false. This property is the same as -v switch
+
+        brief=true\|false; default is false. This property is the same as -b switch
+
+        debug=OFF\|ERROR\|WARN\|INFO\|DEBUG; default is INFO. This property is the same as -d switch
+
+
+
