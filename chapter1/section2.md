@@ -44,3 +44,19 @@ Details at logfile: /Users/didi/pig\_1502613762112.log
 
 2017-08-13 16:42:42,777 \[main\] INFO  org.apache.pig.Main - Pig script completed in 894 milliseconds \(894 ms\)
 
+$ vi .bashrc
+
+\#export PIG\_CLASSPATH=$PIG\_HOME/conf
+
+export PIG\_CLASSPATH=$HADOOP\_HOME/etc/hadoop
+
+$ pig -version
+
+Apache Pig version 0.17.0 \(r1797386\)
+
+compiled Jun 02 2017, 15:41:58
+
+安装成功
+
+
+
