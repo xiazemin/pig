@@ -62,3 +62,13 @@ grunt&gt; A=load "/Users/didi/pig/pig/test" uing PigStorage\(':'\) as \(Sno:char
 
 2017-08-13 17:03:24,275 \[main\] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1200: &lt;line 1, column 36&gt;  mismatched input 'uing' expecting SEMI\_COLON
 
+拼写错误应该为using
+
+正确为：
+
+grunt&gt; A = load '/Users/didi/pig/pig/test' using PigStorage\(':'\) as \(Sno:chararray,Sname:chararray,Ssex:chararray,Sage:int,Sdept:chararray\); B = foreach A generate Sname,Sage; dump B;
+
+
+
+
+
