@@ -42,7 +42,11 @@ grunt&gt; group\_multipe = group student by \(age,sex\) ; dump group\_multipe ;
 
 Group All
 
-
-
 你可以按所有的列对关系进行分组
+
+grunt&gt;  group\_all = group student all ; dump group\_all ;
+
+\(all,{\(201000106,滑可,男,19,计算机系统结构\),\(201000105,吴达,男,19,计算机系统结构\),\(201000104,李肖,男,19,计算机系统结构\),\(201000103,刘花,女,18,计算机应用技术\),\(201000102,王丽,女,19,计算机软件与理论\),\(201000101,李勇,男,20,计算机软件与理论\)}\)
+
+
 
