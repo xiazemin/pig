@@ -1,2 +1,30 @@
-# section2
+# Diagnostic运算符
+
+Pig Latin提供四种不同类型的诊断运算符:
+
+Dump运算符
+
+Describe运算符
+
+Explanation运算符
+
+Illustration运算符
+
+Dump运算符
+
+
+
+Dump 运算符用于运行Pig Latin语句，并在屏幕上显示结果，它通常用于调试目的。
+
+语法
+
+
+
+下面给出了 Dump 运算符的语法。
+
+grunt&gt; Dump Relation\_Name
+
+
+
+
 
