@@ -38,3 +38,25 @@ grunt&gt; self\_join\_data = join customers1 by  id , customers by id ; dump sel
 
 \(7,Muffy,24,Indore,10000,7,Muffy,24,Indore,10000\)
 
+## Inner Join（内部连接）
+
+**Inner Join**使用较为频繁；它也被称为**等值连接**。当两个表中都存在匹配时，内部连接将返回行。基于连接谓词（join-predicate），通过组合两个关系（例如A和B）的列值来创建新关系。查询将A的每一行与B的每一行进行比较，以查找满足连接谓词的所有行对。当连接谓词被满足时，A和B的每个匹配的行对的列值被组合成结果行。
+
+### 语法
+
+以下是使用**JOIN**运算符执行**inner join**操作的语法。
+
+```
+grunt>result = JOIN relation1 BY columnname, relation2 BY columnname;
+```
+
+grunt&gt; coustomer\_orders = JOIN customers BY id, orders BY customer\_id; dump coustomer\_orders ;
+
+\(2,Khilan,25,Delhi,1500,101,2009-11-20 00:00:00,2,1560\)
+
+\(3,kaushik,23,Kota,2000,100,2009-10-08 00:00:00,3,1500\)
+
+\(3,kaushik,23,Kota,2000,102,2009-10-08 00:00:00,3,3000\)
+
+\(4,Chaitali,25,Mumbai,6500,103,2008-05-20 00:00:00,4,2060\)
+
