@@ -33,7 +33,6 @@ grunt
 >
  Student_data = LOAD 'student_data.txt' USING PigStorage(',')as 
    ( id:int, firstname:chararray, lastname:chararray, phone:chararray, city:chararray );
-
 ```
 
 ## Pig Latin - 数据类型
@@ -67,13 +66,13 @@ grunt
 
 | 运算符 | 描述 | 示例 |
 | :--- | :--- | :--- |
-| + | **加** - 运算符的两侧的值相加 | a+b将得出30 |
-| − | **减** - 从运算符左边的数中减去右边的数 | a-b将得出-10 |
-| \* | **乘** - 运算符两侧的值相乘 | a\*b将得出200 |
+| + | **加** - 运算符的两侧的值相加 | a+b将得出30 |
+| − | **减** - 从运算符左边的数中减去右边的数 | a-b将得出-10 |
+| \* | **乘** - 运算符两侧的值相乘 | a\*b将得出200 |
 | / | **除**- 用运算符左边的数除右边的数 | b / a将得出2 |
 | % | **系数**- 用运算符右边的数除左边的数并返回余数 | b％a将得出0 |
 | ？: | **Bincond**- 评估布尔运算符。它有三个操作数，如下所示。变量**x**=（expression）？**value1**（如果为true）:**value2**（如果为false）。 | b =（a == 1）？20:30;如果a = 1，则b的值为20。如果a！= 1，则b的值为30。 |
-| CASEWHENTHENELSEEND | **Case**- case运算符等效于嵌套的bincond运算符。 | CASE f2 ％ 2WHEN  0THEN'even' WHEN  1THEN'odd'END |
+| CASEWHENTHENELSEEND | **Case**- case运算符等效于嵌套的bincond运算符。 | CASE f2 ％ 2WHEN  0THEN'even' WHEN  1THEN'odd'END |
 
 ## Pig Latin - 比较运算符
 
@@ -86,7 +85,7 @@ grunt
 | &gt; | **大于**- 检查左边数的值是否大于右边数的值。如果是，则条件变为true。 | （a&gt; b）不为true。 |
 | &lt; | **小于**- 检查左边数的值是否小于右边数的值。如果是，则条件变为true。 | （a&lt;b）为true。 |
 | &gt;= | **大于或等于**- 检查左边数的值是否大于或等于右边数的值。如果是，则条件变为true。 | （a&gt;=b）不为true。 |
-| &lt;= | **小于或等于**- 检查左边数的值是否小于或等于右边数的值。如果是，则条件变为true。 | （a&lt;=b）为true。  |
+| &lt;= | **小于或等于**- 检查左边数的值是否小于或等于右边数的值。如果是，则条件变为true。 | （a&lt;=b）为true。 |
 | matches | **模式匹配**- 检查左侧的字符串是否与右侧的常量匹配。 | f1 matches '.\* tutorial.\*' |
 
 ## Pig Latin - 类型结构运算符
@@ -129,9 +128,6 @@ grunt
 | DESCRIBE | 描述关系的模式。 |
 | EXPLAIN | 查看逻辑，物理或MapReduce执行计划以计算关系。 |
 | ILLUSTRATE | 查看一系列语句的分步执行。 |
-
-  
-
 
 
 
