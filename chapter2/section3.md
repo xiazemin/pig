@@ -20,11 +20,29 @@ grunt&gt; dump group\_data;
 
 输出
 
-
-
 将获得显示名为group\_data关系的内容的输出，如下所示。在这里你可以观察到结果模式有两列:
 
 一个是age，通过它我们将关系分组。
 
 另一个是bag，其中包含一组元组，有各自年龄的学生记录。
+
+grunt&gt;  describe group\_data ;
+
+group\_data: {group: int,student: {\(id: int,name: chararray,sex: chararray,age: int,class: chararray\)}}
+
+按多列分组
+
+grunt&gt; group\_multipe = group student by \(age,sex\) ; dump group\_multipe ;
+
+\(\(18,女\),{\(201000103,刘花,女,18,计算机应用技术\)}\)
+
+\(\(19,女\),{\(201000102,王丽,女,19,计算机软件与理论\)}\)
+
+\(\(19,男\),{\(201000106,滑可,男,19,计算机系统结构\),\(201000105,吴达,男,19,计算机系统结构\),\(201000104,李肖,男,19,计算机系统结构\)}\)
+
+Group All
+
+
+
+你可以按所有的列对关系进行分组
 
