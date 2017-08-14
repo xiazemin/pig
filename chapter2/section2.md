@@ -24,9 +24,21 @@ describe 运算符用于查看关系的模式。
 
 语法
 
-
-
 describe 运算符的语法如下
 
 grunt&gt; Describe Relation\_name
+
+grunt&gt;     describe student;
+
+student: {id: int,name: chararray,sex: chararray,age: int,class: chararray}
+
+explain 运算符用于显示关系的逻辑，物理和MapReduce执行计划。
+
+语法
+
+
+
+下面给出了 explain 运算符的语法。
+
+grunt&gt; explain Relation\_name;
 
