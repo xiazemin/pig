@@ -144,5 +144,13 @@ MapReduce node scope-56
 
 Map Plan
 
+illustrate 运算符为你提供了一系列语句的逐步执行。
 
+语法
+
+
+
+下面给出了illustrate运算符的语法。
+
+grunt&gt; illustrate Relation\_name;
 
