@@ -128,6 +128,37 @@ grunt&gt;  outer\_right = JOIN customers BY id RIGHT, orders BY customer\_id; du
 grunt>outer_full = JOIN customers BY id FULL OUTER, orders BY customer_id;
 ```
 
-  
+grunt&gt;  outer\_full = JOIN customers BY id FULL OUTER, orders BY customer\_id; dump outer\_full ;
+
+\(1,Ramesh,32,Ahmedabad,2000,,,,\)
+
+\(2,Khilan,25,Delhi,1500,101,2009-11-20 00:00:00,2,1560\)
+
+\(3,kaushik,23,Kota,2000,100,2009-10-08 00:00:00,3,1500\)
+
+\(3,kaushik,23,Kota,2000,102,2009-10-08 00:00:00,3,3000\)
+
+\(4,Chaitali,25,Mumbai,6500,103,2008-05-20 00:00:00,4,2060\)
+
+\(5,Hardik,27,Bhopal,8500,,,,\)
+
+\(6,Komal,22,MP,4500,,,,\)
+
+\(7,Muffy,24,Indore,10000,,,,\)
+
+使用多个Key
+
+
+
+我们可以使用多个key执行JOIN操作。
+
+语法
+
+
+
+下面是如何使用多个key对两个表执行JOIN操作。
+
+grunt&gt; Relation3\_name = JOIN Relation2\_name BY \(key1, key2\), Relation3\_name BY \(key1, key2\);
+
 
 
