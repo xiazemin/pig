@@ -148,17 +148,71 @@ grunt&gt;  outer\_full = JOIN customers BY id FULL OUTER, orders BY customer\_id
 
 使用多个Key
 
-
-
 我们可以使用多个key执行JOIN操作。
 
 语法
 
-
-
 下面是如何使用多个key对两个表执行JOIN操作。
 
 grunt&gt; Relation3\_name = JOIN Relation2\_name BY \(key1, key2\), Relation3\_name BY \(key1, key2\);
+
+$ hdfs dfs -put ./employee\_contact.txt /input
+
+grunt&gt;  employee\_contact = LOAD 'hdfs://localhost:8020/input/employee\_contact.txt' USING PigStorage\(','\)   as \(id:int, phone:chararray, email:chararray, city:chararray, jobid:int\); dump employee\_contact ;
+
+\(1,9848022337,Rajiv@gmail.com,Hyderabad,3\)
+
+\(2,9848022338,siddarth@gmail.com,Kolkata,3\)
+
+\(3,9848022339,Rajesh@gmail.com,Delhi,3\)
+
+\(4,9848022330,Preethi@gmail.com,Pune,3\)
+
+\(5,9848022336,Trupthi@gmail.com,Bhuwaneshwar,3\)
+
+\(6,9848022335,Archana@gmail.com,Chennai,3\)
+
+\(7,9848022334,Komal@gmail.com,trivendram,2\)
+
+\(8,9848022333,Bharathi@gmail.com,Chennai,1\)
+
+$ hdfs dfs -put ./employer.txt /input
+
+grunt&gt; employer = load 'hdfs://localhost:8020/input/employer.txt' using PigStorage\(','\) as  \(id:int, firstname:chararray, lastname:chararray, age:int, designation:chararray, jobid:int\); dump employer ;
+
+\(1,Rajiv,Reddy,21,programmer,3\)
+
+\(2,siddarth,Battacharya,22,programmer,3\)
+
+\(3,Rajesh,Khanna,22,programmer,3\)
+
+\(4,Preethi,Agarwal,21,programmer,3\)
+
+\(5,Trupthi,Mohanthy,23,programmer,3\)
+
+\(6,Archana,Mishra,23,programmer,3\)
+
+\(7,Komal,Nayak,24,teamlead,2\)
+
+\(8,Bharathi,Nambiayar,24,manager,1\)
+
+grunt&gt;  emp = JOIN employer BY \(id,jobid\), employee\_contact BY \(id,jobid\); dump emp ;
+
+\(1,Rajiv,Reddy,21,programmer,3,1,9848022337,Rajiv@gmail.com,Hyderabad,3\)
+
+\(2,siddarth,Battacharya,22,programmer,3,2,9848022338,siddarth@gmail.com,Kolkata,3\)
+
+\(3,Rajesh,Khanna,22,programmer,3,3,9848022339,Rajesh@gmail.com,Delhi,3\)
+
+\(4,Preethi,Agarwal,21,programmer,3,4,9848022330,Preethi@gmail.com,Pune,3\)
+
+\(5,Trupthi,Mohanthy,23,programmer,3,5,9848022336,Trupthi@gmail.com,Bhuwaneshwar,3\)
+
+\(6,Archana,Mishra,23,programmer,3,6,9848022335,Archana@gmail.com,Chennai,3\)
+
+\(7,Komal,Nayak,24,teamlead,2,7,9848022334,Komal@gmail.com,trivendram,2\)
+
+\(8,Bharathi,Nambiayar,24,manager,1,8,9848022333,Bharathi@gmail.com,Chennai,1\)
 
 
 
