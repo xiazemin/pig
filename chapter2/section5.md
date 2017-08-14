@@ -60,3 +60,74 @@ grunt&gt; coustomer\_orders = JOIN customers BY id, orders BY customer\_id; dump
 
 \(4,Chaitali,25,Mumbai,6500,103,2008-05-20 00:00:00,4,2060\)
 
+**注意**：
+
+Outer Join：与inner join不同，**outer join**返回至少一个关系中的所有行。outer join操作以三种方式执行：
+
+* Left outer join
+* Right outer join
+* Full outer join
+
+## Left Outer Join（左外连接）
+
+**left outer join**操作返回左表中的所有行，即使右边的关系中没有匹配项。
+
+### 语法
+
+下面给出使用**JOIN**运算符执行**left outer join**操作的语法。
+
+grunt&gt; Relation3\_name = JOIN Relation1\_name BY id LEFT OUTER, Relation2\_name BY customer\_id;
+
+grunt&gt; outer\_left = JOIN customers BY id LEFT OUTER, orders BY customer\_id; dump outer\_left ;
+
+\(1,Ramesh,32,Ahmedabad,2000,,,,\)
+
+\(2,Khilan,25,Delhi,1500,101,2009-11-20 00:00:00,2,1560\)
+
+\(3,kaushik,23,Kota,2000,100,2009-10-08 00:00:00,3,1500\)
+
+\(3,kaushik,23,Kota,2000,102,2009-10-08 00:00:00,3,3000\)
+
+\(4,Chaitali,25,Mumbai,6500,103,2008-05-20 00:00:00,4,2060\)
+
+\(5,Hardik,27,Bhopal,8500,,,,\)
+
+\(6,Komal,22,MP,4500,,,,\)
+
+\(7,Muffy,24,Indore,10000,,,,\)
+
+## Right Outer Join（右外连接）
+
+**right outer join**操作将返回右表中的所有行，即使左表中没有匹配项。
+
+### 语法
+
+下面给出使用**JOIN**运算符执行**right outer join**操作的语法。
+
+grunt&gt; outer\_right = JOIN customers BY id RIGHT, orders BY customer\_id;
+
+grunt&gt;  outer\_right = JOIN customers BY id RIGHT, orders BY customer\_id; dump outer\_right ;
+
+\(2,Khilan,25,Delhi,1500,101,2009-11-20 00:00:00,2,1560\)
+
+\(3,kaushik,23,Kota,2000,100,2009-10-08 00:00:00,3,1500\)
+
+\(3,kaushik,23,Kota,2000,102,2009-10-08 00:00:00,3,3000\)
+
+\(4,Chaitali,25,Mumbai,6500,103,2008-05-20 00:00:00,4,2060\)
+
+## Full Outer Join（全外连接）
+
+当一个关系中存在匹配时，**full outer join**操作将返回行。
+
+### 语法
+
+下面给出使用**JOIN**运算符执行**full outer join**的语法。
+
+```
+grunt>outer_full = JOIN customers BY id FULL OUTER, orders BY customer_id;
+```
+
+  
+
+
