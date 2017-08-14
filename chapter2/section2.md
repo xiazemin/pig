@@ -58,77 +58,91 @@ student: \(Name: LOStore Schema: id\#145:int,name\#146:chararray,sex\#147:charar
 
 \|---student: \(Name: LOForEach Schema: id\#145:int,name\#146:chararray,sex\#147:chararray,age\#148:int,class\#149:chararray\)
 
-    \|   \|
+```
+\|   \|
 
-    \|   \(Name: LOGenerate\[false,false,false,false,false\] Schema: id\#145:int,name\#146:chararray,sex\#147:chararray,age\#148:int,class\#149:chararray\)ColumnPrune:OutputUids=\[145, 146, 147, 148, 149\]ColumnPrune:InputUids=\[145, 146, 147, 148, 149\]
+\|   \(Name: LOGenerate\[false,false,false,false,false\] Schema: id\#145:int,name\#146:chararray,sex\#147:chararray,age\#148:int,class\#149:chararray\)ColumnPrune:OutputUids=\[145, 146, 147, 148, 149\]ColumnPrune:InputUids=\[145, 146, 147, 148, 149\]
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \(Name: Cast Type: int Uid: 145\)
+\|   \|   \(Name: Cast Type: int Uid: 145\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \|---id:\(Name: Project Type: bytearray Uid: 145 Input: 0 Column: \(\*\)\)
+\|   \|   \|---id:\(Name: Project Type: bytearray Uid: 145 Input: 0 Column: \(\*\)\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \(Name: Cast Type: chararray Uid: 146\)
+\|   \|   \(Name: Cast Type: chararray Uid: 146\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \|---name:\(Name: Project Type: bytearray Uid: 146 Input: 1 Column: \(\*\)\)
+\|   \|   \|---name:\(Name: Project Type: bytearray Uid: 146 Input: 1 Column: \(\*\)\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \(Name: Cast Type: chararray Uid: 147\)
+\|   \|   \(Name: Cast Type: chararray Uid: 147\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \|---sex:\(Name: Project Type: bytearray Uid: 147 Input: 2 Column: \(\*\)\)
+\|   \|   \|---sex:\(Name: Project Type: bytearray Uid: 147 Input: 2 Column: \(\*\)\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \(Name: Cast Type: int Uid: 148\)
+\|   \|   \(Name: Cast Type: int Uid: 148\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \|---age:\(Name: Project Type: bytearray Uid: 148 Input: 3 Column: \(\*\)\)
+\|   \|   \|---age:\(Name: Project Type: bytearray Uid: 148 Input: 3 Column: \(\*\)\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \(Name: Cast Type: chararray Uid: 149\)
+\|   \|   \(Name: Cast Type: chararray Uid: 149\)
 
-    \|   \|   \|
+\|   \|   \|
 
-    \|   \|   \|---class:\(Name: Project Type: bytearray Uid: 149 Input: 4 Column: \(\*\)\)
+\|   \|   \|---class:\(Name: Project Type: bytearray Uid: 149 Input: 4 Column: \(\*\)\)
 
-    \|   \|
+\|   \|
 
-    \|   \|---\(Name: LOInnerLoad\[0\] Schema: id\#145:bytearray\)
+\|   \|---\(Name: LOInnerLoad\[0\] Schema: id\#145:bytearray\)
 
-    \|   \|
+\|   \|
 
-    \|   \|---\(Name: LOInnerLoad\[1\] Schema: name\#146:bytearray\)
+\|   \|---\(Name: LOInnerLoad\[1\] Schema: name\#146:bytearray\)
 
-    \|   \|
+\|   \|
 
-    \|   \|---\(Name: LOInnerLoad\[2\] Schema: sex\#147:bytearray\)
+\|   \|---\(Name: LOInnerLoad\[2\] Schema: sex\#147:bytearray\)
 
-    \|   \|
+\|   \|
 
-    \|   \|---\(Name: LOInnerLoad\[3\] Schema: age\#148:bytearray\)
+\|   \|---\(Name: LOInnerLoad\[3\] Schema: age\#148:bytearray\)
 
-    \|   \|
+\|   \|
 
-    \|   \|---\(Name: LOInnerLoad\[4\] Schema: class\#149:bytearray\)
+\|   \|---\(Name: LOInnerLoad\[4\] Schema: class\#149:bytearray\)
 
-    \|
+\|
 
-    \|---student: \(Name: LOLoad Schema: id\#145:bytearray,name\#146:bytearray,sex\#147:bytearray,age\#148:bytearray,class\#149:bytearray\)RequiredFields:null
+\|---student: \(Name: LOLoad Schema: id\#145:bytearray,name\#146:bytearray,sex\#147:bytearray,age\#148:bytearray,class\#149:bytearray\)RequiredFields:null
+```
 
 \#-----------------------------------------------
 
 \# Physical Plan:
 
 \#-----------------------------------------------
+
+\#--------------------------------------------------
+
+\# Map Reduce Plan
+
+\#--------------------------------------------------
+
+MapReduce node scope-56
+
+Map Plan
+
+
 
