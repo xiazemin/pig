@@ -12,11 +12,11 @@ LIMIT 运算符用于从关系中获取有限数量的元组。
 
 语法
 
-
-
 下面给出了 LIMIT 运算符的语法。
 
 grunt&gt; Result = LIMIT Relation\_name required number of tuples;
 
+grunt&gt; limit\_data = limit student 1 ; dump limit\_data ;
 
+\(1,Rajiv,Reddy,9848022337,Hyderabad\)
 
