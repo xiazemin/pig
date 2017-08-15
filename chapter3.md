@@ -38,3 +38,5 @@ grunt&gt;   student1 = load 'hdfs://localhost:8020/input/student1.txt' using Pig
 
 \(8,Bharathi,Nambiayar,9848022333,Chennai.\)
 
+
+
